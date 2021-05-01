@@ -130,10 +130,18 @@ p {
 	transition: transform 0.5s ease-in-out;
 	animation: carousel-slide 12s ease-in-out 3s;
 }
+.carousel li.slide {
+	/* border: 1px solid red; */
+	max-width: 800px;
+}
 #testimonios h2.section-title {
 	color: var(--title-text-color);
 }
 .carousel .slides blockquote {
+	max-width: ;
+}
+.carousel .slides blockquote,
+.carousel .slides h6 {
 	color: var(--slide-text-color);
 }
 
