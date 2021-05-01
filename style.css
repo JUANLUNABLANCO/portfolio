@@ -6,6 +6,8 @@
 	--second-alpha-color: rgba(20, 25, 45, 0.75);
 	--third-color: #501464;
 	--third-alpha-color: rgba(80, 20, 100, 0.75);
+	--fourth-color: #007a7f;
+	--fourth-alpha-color: rgba(0, 122, 127, 0.75);
 	--white-color: #fff;
 	--gray-light-color: #f3f3f3;
 	--gray-color: #ccc;
@@ -127,6 +129,12 @@ p {
 	list-style: none;
 	transition: transform 0.5s ease-in-out;
 	animation: carousel-slide 12s ease-in-out 3s;
+}
+#testimonios h2.section-title {
+	color: var(--title-text-color);
+}
+.carousel .slides blockquote {
+	color: var(--slide-text-color);
 }
 
 .carousel input {
@@ -575,12 +583,33 @@ progress::-moz-progress-bar {
 	display: block;
 }
 
-.portfolio-card img {
+.portfolio-card + img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
-
+.portfolio-card > img.logo-card {
+	position: absolute;
+	top: 140px; /* 200 - 120/2 = 140 */
+	left: 140px;
+	width: 120px;
+	height: 120px;
+	z-index: 10;
+}
+.portfolio-card > h1.title-card {
+	position: absolute;
+	font-weight: 900;
+	font-size: 3rem;
+	bottom: 20px; /* 200 - 120/2 = 140 */
+	left: 30px;
+	z-index: 10;
+}
+.portfolio-card:nth-child(odd) > h1.title-card {
+	color: var(--first-color);
+}
+.portfolio-card:nth-child(even) > h1.title-card {
+	color: var(--link-color);
+}
 .portfolio-card-info {
 	position: absolute;
 	top: 0;
@@ -598,6 +627,7 @@ progress::-moz-progress-bar {
 .portfolio-card:hover .portfolio-card-info {
 	opacity: 1;
 	pointer-events: auto;
+	z-index: 12;
 }
 
 .portfolio-card-info > div {
