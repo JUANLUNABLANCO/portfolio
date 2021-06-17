@@ -27,7 +27,7 @@
 	$form.addEventListener('submit', (e) => {
 		e.preventDefault();
 		$loader.classList.remove('none');
-		fetch('https://formsubmit.co/ajax/gotth3way.apis@gmail.com', {
+		fetch('https://formsubmit.co/ajax/9fa64cbc853657c2e0b040d5f45ada8a', {
 			method: 'POST',
 			body: new FormData(e.target),
 		})
