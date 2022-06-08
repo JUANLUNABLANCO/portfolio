@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,6 +36,7 @@
 			name="twitter:url"
 			content="https://juanluna.github.io/youtube-taller-maquetacion/portafolio-cv"
 		/>
+		<!-- <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> -->
 	</head>
 
 	<body>
@@ -55,29 +56,74 @@
 					</svg>
 				</button>
 				<nav class="menu">
-					<a href="#inicio">Inicio</a>
-					<a href="#acerca">Acerca</a>
-					<a href="#servicios">Servicios</a>
-					<a href="#portafolio">Portafolio</a>
-					<a href="#testimonios">testimonios</a>
-					<a href="#contacto">Contacto</a>
+					<!-- // lang=es -->
+					<a href="#inicio" class="item-lang" lang="es">Inicio</a>
+					<a href="#acerca" class="item-lang" lang="es">Acerca</a>
+					<a href="#servicios" class="item-lang" lang="es">Servicios</a>
+					<a href="#portafolio" class="item-lang" lang="es">Portafolio</a>
+					<a href="#testimonios" class="item-lang" lang="es">testimonios</a>
+					<a href="#contacto" class="item-lang" lang="es">Contacto</a>
+					<!-- // lang=en -->
+					<a href="#inicio" class="item-lang" lang="en">Home</a>
+					<a href="#acerca" class="item-lang" lang="en">About</a>
+					<a href="#servicios" class="item-lang" lang="en">Services</a>
+					<a href="#portafolio" class="item-lang" lang="en">Portfolio</a>
+					<a href="#testimonios" class="item-lang" lang="en">Testimonials</a>
+					<a href="#contacto" class="item-lang" lang="en">Contact</a>
 				</nav>
+				<select id="selected_lang">
+					<option class="en" value="en" selected>EN</option>
+					<option class="es" value="es">ES</option>
+				</select>
+				<aside class="flags">
+					<div class="flag flag--en active"></div>
+					<div class="flag flag--es"></div>
+					<!-- <div class="flag--france"></div> -->
+				</aside>
 			</section>
 		</header>
 		<section id="inicio" class="home">
 			<article class="hero-image" style="--hero-image: url('assets/hero-image-home.jpg'); --hero-attachment: fixed">
 				<aside class="hero-image-opacity" style="--hero-opacity-color: var(--black-alpha-color)">
-					<div class="hero-image-content">
-						<h2 class="hero-image-title" style="--hero-text-color: var(--white-color)">
-							 Asesor <br/>Blockchain
-						</h2>
+					<div class="hero-image-content item-lang" lang="en">
+						<h2 class="hero-image-title" style="--hero-text-color: var(--white-color)">Blockchain <br />Advisor</h2>
+						<a href="#contacto" class="btn">CONTACT ME</a>
+					</div>
+					<div class="hero-image-content item-lang" lang="es">
+						<h2 class="hero-image-title" style="--hero-text-color: var(--white-color)">Asesor <br />Blockchain</h2>
 						<a href="#contacto" class="btn">CONTÁCTAME</a>
 					</div>
 				</aside>
 			</article>
 		</section>
 		<section id="acerca" class="about section container full-lg-screen">
-			<article class="text-lg-right">
+			<article class="text-lg-right item-lang" lang="en">
+				<aside class="text-center text-lg-right">
+					<h1>Juan Luna</h1>
+					<h5>Developer and <i>BlockChain Advisor</i></h5>
+				</aside>
+				<p>I begin been full stack developer in 2010.</p>
+				<p>
+					In 2018 I took the jump ​​<b><i>to the development and Blockchain Advisoring </i></b>.
+					<b>WEB3, DAPPS, DOAS, Smart Contracts, NFT´S, Generative Art, IPFS</b>
+				</p>
+				<p>
+					I am qualified to advise on <b><i>Block Chain</i></b> in general and I can teach courses on
+					<b>development of smarts contracts</b> or creation of <b>NFT's</b>, both in a simple way (without code), as in
+					a more professional way (with code).
+				</p>
+				<p>
+					<span class="b-light">
+						I have created a web example for a <b><i>smart contract</i></b> called <b><i>Chronotoken</i></b
+						>.
+					</span>
+				</p>
+				<div class="text-center text-lg-left">
+					<!-- WARNING: yo need some site to put tour portfolio, like a git hub or googledrive: for the pdf -->
+					<a class="btn" href="https://www.chronotoken.dev" target="_blank" rel="noopener">CHRONOTOKEN WEB</a>
+				</div>
+			</article>
+			<article class="text-lg-right item-lang" lang="es">
 				<aside class="text-center text-lg-right">
 					<h1>Juan Luna</h1>
 					<h5>Desarrollador y <i>Asesor BlockChain </i></h5>
@@ -107,7 +153,8 @@
 				<img class="gray-scale" src="assets/juanluna.jpg" alt="juanluna" />
 			</article>
 			<article>
-				<h2 class="text-center text-lg-left">Mis Habilidades</h2>
+				<h2 class="text-center text-lg-left item-lang" lang="en">My abilities</h2>
+				<h2 class="text-center text-lg-left item-lang" lang="es">Mis Habilidades</h2>
 				<div class="progress">
 					<p>
 						<b><i>application analysis and Design </i></b>
@@ -157,7 +204,16 @@
 					</p>
 					<progress value="85" min="0" max="100"></progress>
 				</div>
-				<p>
+				<p class="item-lang" lang="en">
+					<span class="b-light">
+						I have a repository of blockchain development courses, with
+						<b>
+							<i>smart contracts</i>
+						</b>
+						<b> <i>React and Web3</i> </b>.
+					</span>
+				</p>
+				<p class="item-lang" lang="es">
 					<span class="b-light">
 						Tengo un repositorio de cursos de desarrollo blockchain, con
 						<b>
@@ -166,7 +222,13 @@
 						<b> <i>React y Web3</i> </b>.
 					</span>
 				</p>
-				<div class="text-center text-lg-left">
+				<div class="text-center text-lg-left item-lang" lang="en">
+					<!-- WARNING: yo need some site to put tour portfolio, like a git hub or googledrive: for the pdf -->
+					<a class="btn" href="https://github.com/JUANLUNABLANCO/BLOCKCHAIN_COURSES" target="_blank" rel="noopener"
+						>REPOSITORI</a
+					>
+				</div>
+				<div class="text-center text-lg-left item-lang" lang="es">
 					<!-- WARNING: yo need some site to put tour portfolio, like a git hub or googledrive: for the pdf -->
 					<a class="btn" href="https://github.com/JUANLUNABLANCO/BLOCKCHAIN_COURSES" target="_blank" rel="noopener"
 						>REPOSITORIO</a
@@ -176,7 +238,8 @@
 		</section>
 		<section id="servicios" class="services section bg-gray-light">
 			<div class="container full-lg-screen">
-				<h2 class="section-title">¿Qué servicios ofrezco?</h2>
+				<h2 class="section-title item-lang" lang="en">What services do I offer?</h2>
+				<h2 class="section-title item-lang" lang="es">¿Qué servicios ofrezco?</h2>
 				<article class="service-card">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 						<path
@@ -186,8 +249,16 @@
 							d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z"
 						/>
 					</svg>
-					<h3><i>Asesoramiento Blockchain</i></h3>
-					<p>
+					<h3 class="item-lang" lang="en"><i>Advice Blockchain</i></h3>
+					<h3 class="item-lang" lang="es"><i>Asesoramiento Blockchain</i></h3>
+					<p class="item-lang" lang="en">
+						Both for companies and developers who want to enter the Block Chain world. From the most basic level, What
+						is a <b>BlockChain</b>?, to the most advanced level, creating your own <b>Smart Contract</b>, going through
+						the creation of <b>NFT´s</b>, in a simple way, using <b>free tools</b> or in a more professional way, using
+						<b>Decentralized Application Development <i>DAPPS</i></b
+						>.
+					</p>
+					<p class="item-lang" lang="es">
 						Tanto para empresas, como para desarrolladores, que quieran adentrarse en el mundo Block Chain. Desde el
 						nivel más básico, ¿Qué es una <b>BlockChain</b>?, hasta el nivel más avanzado, creación de tu propio
 						<b>Smart Contract</b>, pasando por la creación de <b>NFT´s</b>, de forma sencilla, usando
@@ -202,8 +273,15 @@
 							d="M20,3H7C5.897,3,5,3.897,5,5v2H4C2.897,7,2,7.897,2,9v10c0,1.103,0.897,2,2,2h6c1.103,0,2-0.897,2-2h8c1.103,0,2-0.897,2-2 V5C22,3.897,21.103,3,20,3z M6,9h4l-0.003,9H4V9H6z M12,17V9c0-1.103-0.897-2-2-2H7V5h11v12H12z"
 						/>
 					</svg>
-					<h3>Asesoramiento y Creación de NFTS</h3>
-					<p>
+					<h3 class="item-lang" lang="en">Advice and Minting of NFTS</h3>
+					<h3 class="item-lang" lang="es">Asesoramiento y Creación de NFTS</h3>
+					<p class="item-lang" lang="en">
+						Do you want to understand all about <b>NFT's</b> in a <b>professional</b> way? See the different ways in
+						which that can be created <b>NFT's, collections, purchase, sale, Royalties,</b> ... The different
+						<b>networks</b> where you can upload your NFT's or you want to be more <b>professional</b>, you want to
+						create your own <b>market place</b> with a <b>own web application</b> and your own <b>smart contract</b>.
+					</p>
+					<p class="item-lang" lang="es">
 						¿Quieres entender esto de los <b>NFT´s</b> de una forma <b>profesional</b>?, ver las distintas formas en las
 						que se pueden crear los <b>NFT´s, colecciones, compra, venta, Royalties,</b> ... Las diferentes
 						<b>redes</b> donde puedes subir tus NFT´s o quieres ser más <b>profesional</b>, quieres crear tu propia
@@ -219,19 +297,31 @@
 							d="M9.293 9.293L5.586 13 9.293 16.707 10.707 15.293 8.414 13 10.707 10.707zM14.707 9.293L13.293 10.707 15.586 13 13.293 15.293 14.707 16.707 18.414 13z"
 						/>
 					</svg>
-					<h3><i>Formación para Profesionales</i></h3>
-					<p>
+					<h3 class="item-lang" lang="en"><i>Profesionals Trainning</i></h3>
+					<h3 class="item-lang" lang="es"><i>Profesionals Trainning</i></h3>
+					<p class="item-lang" lang="en">
+						Do you have a <b>team of developers</b>, but they still don't fully understand the <b>solidity language</b>?
+						You have several <b>React, web3, solidity developers</b>, but they don't know how to join the pieces. They
+						need a <b>orientation or master class</b>. Whatever your problem, I can advise you.
+						<br />
+						Do not hesitate to contact me, I am here to help you.
+					</p>
+					<p class="item-lang" lang="es">
 						¿Tienes un <b>equipo de desarrolladores</b>, pero todavía no entienden en profundidad el
 						<b>lenguaje solidity</b>? Tienes varios <b>desarrolladores React, web3, solidity</b>, pero no saben unir las
-						piezas. Necesitan una <b>orientación o master class</b>. Cualquiera que sea tu problema, yo puedo asesorarte.
-						<br/>
-				        No dudes en contactar conmigo, estoy aquí para ayudarte.
-					</br>
+						piezas. Necesitan una <b>orientación o master class</b>. Cualquiera que sea tu problema, yo puedo
+						asesorarte.
+						<br />
+						No dudes en contactar conmigo, estoy aquí para ayudarte.
+					</p>
 				</article>
 				<article class="service-card">
 					<!-- <a href="#contacto" class="btn"></a> -->
 				</article>
-				<article class="service-card">
+				<article class="service-card item-lang" lang="en">
+					<a href="#contacto" class="btn">CONTACT ME</a>
+				</article>
+				<article class="service-card item-lang" lang="es">
 					<a href="#contacto" class="btn">CONTÁCTAME</a>
 				</article>
 				<article class="service-card">
@@ -270,21 +360,30 @@
 				</article> -->
 			</div>
 		</section>
-		<section id="portafolio" class="portfolio section full-lg-screen ">
-			<div class="container ">
-				<br>
-				<h2 class="section-title">Trabajos</h2>
+		<section id="portafolio" class="portfolio section full-lg-screen">
+			<div class="container">
+				<br />
+				<h2 class="section-title item-lang" lang="en">Works</h2>
+				<h2 class="section-title item-lang" lang="es">Trabajos</h2>
 				<a href="#trabajo-1" class="portfolio-card">
 					<img src="assets/portfolio-1.jpg" alt="work 1 Gotth3way" />
 					<img src="assets/logo-1.png" alt="logo Gotth3way" class="logo-card" />
 					<h1 class="title-card">Got Th3 Way</h1>
 					<aside class="portfolio-card-info">
-						<div>
+						<div class="item-lang" lang="en">
 							<h3>Got Th3 Way 2012-2014</h3>
 							<p>
-								Empresa de desarrollo, de una plataforma para impartir cursos de desarrollo web y móvil, similar a Udemy. 
-								Con un blog sobre desarrollo y emprendimiento. Hecho completamente por mí mismo y desarrollado en MEAN. 
-								Mongodb, Express, Angularjs y Nodejs.
+								Development company, a platform to teach web and mobile development courses, similar to Udemy. With a
+								blog about development and entrepreneurship. Completely made by myself and developed in MEAN. Mongodb,
+								Express, Angularjs and Nodejs.
+							</p>
+						</div>
+						<div class="item-lang" lang="es">
+							<h3>Got Th3 Way 2012-2014</h3>
+							<p>
+								Empresa de desarrollo, de una plataforma para impartir cursos de desarrollo web y móvil, similar a
+								Udemy. Con un blog sobre desarrollo y emprendimiento. Hecho completamente por mí mismo y desarrollado en
+								MEAN. Mongodb, Express, Angularjs y Nodejs.
 							</p>
 						</div>
 					</aside>
@@ -294,12 +393,21 @@
 					<img src="assets/logo-2.png" alt="logo XR3DPixel" class="logo-card" />
 					<h1 class="title-card">XR 3D Pixel</h1>
 					<aside class="portfolio-card-info">
-						<div>
+						<div class="item-lang" lang="en">
 							<h3>XR3DPixel 2014-2016</h3>
 							<p>
-								Empresa de desarrollo de aplicaciones web y móviles, dentro del mundo de las nuevas tecnologías web. 
-								Realidad Aumentada, Realidad Virtual, Realidad Mixta, recorridos panorámicos 360, videos 360, etc. 
-								En este proyecto fui el desarrollador y CEO. Dentro de la empresa desarrollé varios proyectos para terceros.
+								Web and mobile application development company, within the world of new web technologies. Augmented
+								Reality, Virtual Reality, Mixed Reality, 360 panoramic tours, 360 videos, etc. In this project I was the
+								developer and CEO. Within the company I developed several projects for third parties.
+							</p>
+						</div>
+						<div class="item-lang" lang="es">
+							<h3>XR3DPixel 2014-2016</h3>
+							<p>
+								Empresa de desarrollo de aplicaciones web y móviles, dentro del mundo de las nuevas tecnologías web.
+								Realidad Aumentada, Realidad Virtual, Realidad Mixta, recorridos panorámicos 360, videos 360, etc. En
+								este proyecto fui el desarrollador y CEO. Dentro de la empresa desarrollé varios proyectos para
+								terceros.
 							</p>
 						</div>
 					</aside>
@@ -310,12 +418,20 @@
 					<img src="assets/logo-3.png" alt="logo captions connection" class="logo-card" />
 					<h1 class="title-card">CC</h1>
 					<aside class="portfolio-card-info">
-						<div>
+						<div class="item-lang" lang="en">
 							<h3>Captions Connection 2017</h3>
 							<p>
-								Desarrollo completo de una aplicación web sobre subtítulos para videos de YouTube. Desarrollé esta 
-								aplicación para la empresa 'Captions Connection', de la cual fui CEO junto con un socio, que era 
-								experto en digital márketing.
+								Complete development of a web application on subtitles for YouTube videos. I developed this application
+								for the company 'Captions Connection', of which I was CEO together with a partner, who was an expert in
+								digital marketing.
+							</p>
+						</div>
+						<div class="item-lang" lang="es">
+							<h3>Captions Connection 2017</h3>
+							<p>
+								Desarrollo completo de una aplicación web sobre subtítulos para videos de YouTube. Desarrollé esta
+								aplicación para la empresa 'Captions Connection', de la cual fui CEO junto con un socio, que era experto
+								en digital márketing.
 							</p>
 						</div>
 					</aside>
@@ -325,10 +441,18 @@
 					<img src="assets/logo-4.png" alt="logo github" class="logo-card" />
 					<h1 class="title-card">Block Chain</h1>
 					<aside class="portfolio-card-info">
-						<div>
+						<div class="item-lang" lang="en">
+							<h3>DAPPS Learning Projects</h3>
+							<p>
+								Code samples in the following technologies: HTML5, CSS3, js, Nodejs, Angular, React, Vue.js, web3 and
+								solidity
+							</p>
+						</div>
+						<div class="item-lang" lang="es">
 							<h3>Proyectos de aprendizaje sobre DAPPS</h3>
 							<p>
-								Ejemplos de código en las siguientes tecnologías: HTML5, CSS3, js, Nodejs, Angular, React, Vue.js, web3 y solidity
+								Ejemplos de código en las siguientes tecnologías: HTML5, CSS3, js, Nodejs, Angular, React, Vue.js, web3
+								y solidity
 							</p>
 						</div>
 					</aside>
@@ -338,11 +462,18 @@
 					<img src="assets/logo-5.png" alt="logo NgxAngular" class="logo-card" />
 					<h1 class="title-card">ChronoToken</h1>
 					<aside class="portfolio-card-info">
-						<div>
+						<div class="item-lang" lang="en">
 							<h3>Chrono Token 2019</h3>
 							<p>
-								Chronotoken, primer Smart Contract y web, sobre una 'ship-coin', creación de token BEP-20
-								Diseño y desarrollo de una web simple, para conexión a través de metamask. 
+								Chronotoken, first Smart Contract and web, on a 'ship-coin', creation of token BEP-20 Design and
+								development of a simple web, for connection through metamask.
+							</p>
+						</div>
+						<div class="item-lang" lang="en">
+							<h3>Chrono Token 2019</h3>
+							<p>
+								Chronotoken, primer Smart Contract y web, sobre una 'ship-coin', creación de token BEP-20 Diseño y
+								desarrollo de una web simple, para conexión a través de metamask.
 							</p>
 						</div>
 					</aside>
@@ -352,12 +483,20 @@
 					<img src="assets/logo-6.png" alt="logo slides-061" class="logo-card" />
 					<h1 class="title-card">NFT POKEMON</h1>
 					<aside class="portfolio-card-info">
-						<div>
+						<div class="item-lang" lang="en">
 							<h3>Colección NFT´s Market-Place DAPP 2021</h3>
 							<p>
-								Creación y Lanzamiento, de mi primera aplicación market place y NFT´s propios.
-								web realizada con react, web3 y smart contract con solidity, generación de arte
-								 y creación de los metadatos para IPFS con Nodejs. Actualemnte en desarrollo.
+								Creation and Launch of my first market place application and own NFT's. website made with react, web3
+								and smart contract with solidity, art generation and creation of metadata for IPFS with Nodejs.
+								Currently in development.
+							</p>
+						</div>
+						<div class="item-lang" lang="es">
+							<h3>Colección NFT´s Market-Place DAPP 2021</h3>
+							<p>
+								Creación y Lanzamiento, de mi primera aplicación market place y NFT´s propios. web realizada con react,
+								web3 y smart contract con solidity, generación de arte y creación de los metadatos para IPFS con Nodejs.
+								Actualemnte en desarrollo.
 							</p>
 						</div>
 					</aside>
@@ -376,12 +515,30 @@
 				</a>
 				<article class="portfolio-modal">
 					<img src="assets/portfolio-1.jpg" alt="Trabajo 1" />
-					<div class="portfolio-info">
+					<div class="portfolio-info item-lang" lang="en">
 						<h3>Got Th3 Way</h3>
 						<p>
-							Empresa de desarrollo, de una plataforma para impartir cursos de desarrollo web y móvil, similar a Udemy. 
-								Con un blog sobre desarrollo y emprendimiento. Hecho completamente por mí mismo y desarrollado en MEAN. 
-								Mongodb, Express, Angularjs y Nodejs.
+							Development company, a platform to teach web and mobile development courses, similar to Udemy. With a blog
+							about development and entrepreneurship. Completely made by myself and developed in MERN. Mongodb, Express,
+							React and Next.
+						</p>
+						<aside class="portfolio-details">
+							<small><b>CLIENT: </b></small>
+							<small>Personal project and entrepreneurship</small>
+							<small><b>DATE:</b></small>
+							<small>2012 | 2014</small>
+							<small><b>TYPE:</b></small>
+							<small>Entrepreneurship</small>
+							<small><b>LINK:</b></small>
+							<small><a target="_blank" rel="noopener">localhost save</a></small>
+						</aside>
+					</div>
+					<div class="portfolio-info item-lang" lang="es">
+						<h3>Got Th3 Way</h3>
+						<p>
+							Empresa de desarrollo, de una plataforma para impartir cursos de desarrollo web y móvil, similar a Udemy.
+							Con un blog sobre desarrollo y emprendimiento. Hecho completamente por mí mismo y desarrollado en MERN.
+							Mongodb, Express, React y Next.
 						</p>
 						<aside class="portfolio-details">
 							<small><b>CLIENTE: </b></small>
@@ -391,7 +548,7 @@
 							<small><b>TIPO:</b></small>
 							<small>Emprendimiento</small>
 							<small><b>ENLACE:</b></small>
-							<small><a target="_blank" rel="noopener">localhost guard</a></small>
+							<small><a target="_blank" rel="noopener">Repositorio en github</a></small>
 						</aside>
 					</div>
 				</article>
@@ -408,12 +565,30 @@
 				</a>
 				<article class="portfolio-modal">
 					<img src="assets/portfolio-2.jpg" alt="Trabajo 2" />
-					<div class="portfolio-info">
+					<div class="portfolio-info item-lang" lang="en">
 						<h3>XR3DPixel</h3>
 						<p>
-							Empresa de desarrollo de aplicaciones web y móviles, dentro del mundo de las nuevas tecnologías web. 
-								Realidad Aumentada, Realidad Virtual, Realidad Mixta, recorridos panorámicos 360, videos 360, etc. 
-								En este proyecto fui el desarrollador y CEO. Dentro de la empresa desarrollé varios proyectos para terceros.
+							Web and mobile application development company, within the world of new web technologies. Augmented
+							Reality, Virtual Reality, Mixed Reality, 360 panoramic tours, 360 videos, etc. In this project I was the
+							developer and CEO. Within the company I developed several projects for third parties.
+						</p>
+						<aside class="portfolio-details">
+							<small><b>CLIENT:</b></small>
+							<small>My second venture with two partners</small>
+							<small><b>DATE:</b></small>
+							<small>2014 | 2016</small>
+							<small><b>TYPE:</b></small>
+							<small>Web and mobile development company</small>
+							<small><b>LINK:</b></small>
+							<small><a target="_blank" rel="noopener">localhost save</a></small>
+						</aside>
+					</div>
+					<div class="portfolio-info item-lang" lang="es">
+						<h3>XR3DPixel</h3>
+						<p>
+							Empresa de desarrollo de aplicaciones web y móviles, dentro del mundo de las nuevas tecnologías web.
+							Realidad Aumentada, Realidad Virtual, Realidad Mixta, recorridos panorámicos 360, videos 360, etc. En este
+							proyecto fui el desarrollador y CEO. Dentro de la empresa desarrollé varios proyectos para terceros.
 						</p>
 						<aside class="portfolio-details">
 							<small><b>CLIENTE:</b></small>
@@ -440,14 +615,37 @@
 				</a>
 				<article class="portfolio-modal">
 					<img src="assets/portfolio-3.jpg" alt="Trabajo 3" />
-					<div class="portfolio-info">
+					<div class="portfolio-info item-lang=" lang="en">
 						<h3>Captions Connection</h3>
 						<p>
-							Desarrollo completo de una aplicación web sobre subtítulos para videos de YouTube. Desarrollé esta 
-								aplicación para la empresa 'Captions Connection', de la cual fui CEO junto con un socio, que era 
-								experto en digital márketing.
+							Complete development of a web application on subtitles for YouTube videos. I developed this application
+							for the company 'Captions Connection', of which I was CEO together with a partner, who was an expert in
+							digital marketing.
 						</p>
-						
+
+						<aside class="portfolio-details">
+							<small><b>CLIENT:</b></small>
+							<small>We were two partners</small>
+							<small><b>DATE:</b></small>
+							<small>2017</small>
+							<small><b>TYPE:</b></small>
+							<small>Personal Entrepreneurship</small>
+							<small><b>LINK:</b></small>
+							<small
+								><a href="https://landingpage.captionsconnection.com/index.html" target="_blank" rel="noopener"
+									>https://captionsconnection.com</a
+								></small
+							>
+						</aside>
+					</div>
+					<div class="portfolio-info item-lang=" lang="es">
+						<h3>Captions Connection</h3>
+						<p>
+							Desarrollo completo de una aplicación web sobre subtítulos para videos de YouTube. Desarrollé esta
+							aplicación para la empresa 'Captions Connection', de la cual fui CEO junto con un socio, que era experto
+							en digital márketing.
+						</p>
+
 						<aside class="portfolio-details">
 							<small><b>CLIENTE:</b></small>
 							<small>Éramos dos socios</small>
@@ -477,10 +675,32 @@
 				</a>
 				<article class="portfolio-modal">
 					<img src="assets/portfolio-4.jpg" alt="work 4" />
-					<div class="portfolio-info">
+					<div class="portfolio-info item-lang" lang="en">
+						<h3>Blockchain Public Projects</h3>
+						<p>
+							Code samples in the following technologies: HTML5, CSS3, js, Nodejs, Angular, React, Vue.js, web3 and
+							solidity
+						</p>
+						<aside class="portfolio-details">
+							<small><b>CLIENT:</b></small>
+							<small>Public Projects</small>
+							<small><b>DATE:</b></small>
+							<small>2017 | 2021</small>
+							<small><b>TYPE:</b></small>
+							<small>Learning,</small>
+							<small><b>LINK:</b></small>
+							<small
+								><a href="https://github.com/JUANLUNABLANCO/BLOCKCHAIN_COURSES" target="_blank" rel="noopener"
+									>Must clone locally</a
+								></small
+							>
+						</aside>
+					</div>
+					<div class="portfolio-info item-lang" lang="es">
 						<h3>Proyectos Públicos Block Chain</h3>
 						<p>
-							Ejemplos de código en las siguientes tecnologías: HTML5, CSS3, js, Nodejs, Angular, React, Vue.js, web3 y solidity
+							Ejemplos de código en las siguientes tecnologías: HTML5, CSS3, js, Nodejs, Angular, React, Vue.js, web3 y
+							solidity
 						</p>
 						<aside class="portfolio-details">
 							<small><b>CLIENTE:</b></small>
@@ -511,11 +731,28 @@
 				</a>
 				<article class="portfolio-modal">
 					<img src="assets/portfolio-5.jpg" alt="Trabajo 5" />
-					<div class="portfolio-info">
+					<div class="portfolio-info item-lang" lang="en">
 						<h3>Chronotoken</h3>
 						<p>
-							Chronotoken, primer Smart Contract y web, sobre una 'ship-coin', creación de token BEP-20
-								Diseño y desarrollo de una web simple, para conexión a través de metamask.
+							Chronotoken, first Smart Contract and web, on a 'ship-coin', creation of token BEP-20 Design and
+							development of a simple web, for connection through metamask.
+						</p>
+						<aside class="portfolio-details">
+							<small><b>CLIENT:</b></small>
+							<small>Freelancer</small>
+							<small><b>DATE:</b></small>
+							<small>2019</small>
+							<small><b>TYPE:</b></small>
+							<small>Blockchain Project</small>
+							<small><b>LINK:</b></small>
+							<small><a href="https://www.chronotoken.dev" target="_blank" rel="noopener">Chronotoken Web</a></small>
+						</aside>
+					</div>
+					<div class="portfolio-info item-lang" lang="es">
+						<h3>Chronotoken</h3>
+						<p>
+							Chronotoken, primer Smart Contract y web, sobre una 'ship-coin', creación de token BEP-20 Diseño y
+							desarrollo de una web simple, para conexión a través de metamask.
 						</p>
 						<aside class="portfolio-details">
 							<small><b>CLIENTE:</b></small>
@@ -542,12 +779,34 @@
 				</a>
 				<article class="portfolio-modal">
 					<img src="assets/portfolio-6.jpg" alt="Trabajo 6" />
-					<div class="portfolio-info">
+					<div class="portfolio-info item-lang" lang="en">
 						<h3>NFT POKEMON HOLO</h3>
 						<p>
-							Creación y Lanzamiento, de mi primera aplicación market place y NFT´s propios.
-								web realizada con react, web3 y smart contract con solidity, generación de arte
-								 y creación de los metadatos para IPFS con Nodejs. Actualemnte en desarrollo.
+							Creation and Launch of my first market place application and own NFT's. website made with react, web3 and
+							smart contract with solidity, art generation and creation of metadata for IPFS with Nodejs. Currently in
+							development.
+						</p>
+						<aside class="portfolio-details">
+							<small><b>CLIENT:</b></small>
+							<small>Entrepreneurship</small>
+							<small><b>DATE:</b></small>
+							<small>2021 | 2022</small>
+							<small><b>TYPE:</b></small>
+							<small>DAPP NFT MARKET PLACE</small>
+							<small><b>LINK:</b></small>
+							<small
+								><a href="https://codepen.io/jaunluna/pen/bGobeVZ" target="_blank" rel="noopener"
+									>design progress</a
+								></small
+							>
+						</aside>
+					</div>
+					<div class="portfolio-info item-lang" lang="es">
+						<h3>NFT POKEMON HOLO</h3>
+						<p>
+							Creación y Lanzamiento, de mi primera aplicación market place y NFT´s propios. web realizada con react,
+							web3 y smart contract con solidity, generación de arte y creación de los metadatos para IPFS con Nodejs.
+							Actualemnte en desarrollo.
 						</p>
 						<aside class="portfolio-details">
 							<small><b>CLIENTE:</b></small>
@@ -557,7 +816,11 @@
 							<small><b>TIPO:</b></small>
 							<small>DAPP NFT MARKET PLACE</small>
 							<small><b>ENLACE:</b></small>
-							<small><a href="https://codepen.io/jaunluna/pen/bGobeVZ" target="_blank" rel="noopener">avance de diseño</a></small>
+							<small
+								><a href="https://codepen.io/jaunluna/pen/bGobeVZ" target="_blank" rel="noopener"
+									>avance de diseño</a
+								></small
+							>
 						</aside>
 					</div>
 				</article>
@@ -571,7 +834,12 @@
 				<aside class="hero-image-opacity" style="--hero-opacity-color: var(--fourth-alpha-color)">
 					<div class="hero-image-content">
 						<div class="container">
-							<h2 class="section-title" style="--title-text-color: var(--white-color)">My clients say</h2>
+							<h2 class="section-title item-lang" lang="en" style="--title-text-color: var(--white-color)">
+								My clients say
+							</h2>
+							<h2 class="section-title item-lang" lang="es" style="--title-text-color: var(--white-color)">
+								Mis clientes dicen
+							</h2>
 							<article class="carousel" style="--carousel-bg-color: var(--third-alpha-color)">
 								<input type="radio" name="slides" id="slide-1" checked />
 								<input type="radio" name="slides" id="slide-2" />
@@ -580,39 +848,62 @@
 								<ul class="slides">
 									<li class="slide">
 										<img class="avatar" src="assets/customer-1.jpg" alt="Cliente 1 Antonio Troyano" />
-										<blockquote style="--slide-text-color: var(--white-color)">
+										<blockquote class="item-lang" lang="en" style="--slide-text-color: var(--white-color)">
 											"XR3DPixel, It's a cool company that do inexplicable and cool things like them. it was terrible,
 											ugly, inappropriate, it didn't work and a style that didn't match my message. Now it is a beauty"
+										</blockquote>
+										<blockquote class="item-lang" lang="es" style="--slide-text-color: var(--white-color)">
+											"XR3DPixel, es una empresa genial que hace cosas inexplicables y geniales como ellos. Fue
+											terrible, feo, inapropiado, no funcionó y un estilo que no coincidía con mi mensaje. Ahora es una
+											belleza"
 										</blockquote>
 										<h3 class="text-first-color">Antonio Troyano y Josemi Campana</h3>
 										<h6 style="--slide-text-color: var(--white-color)">CEO of <i>'estación2b'</i></h6>
 									</li>
 									<li class="slide">
 										<img class="avatar" src="assets/customer-2.jpg" alt="Cliente 2 La evad" />
-										<blockquote style="--slide-text-color: var(--white-color)">
+										<blockquote class="item-lang" lang="en" style="--slide-text-color: var(--white-color)">
 											"My best students in years, that's why I put all my trust in them to launch them. There they are
 											in the Malaga PTA. Let´s go XR3DPixel. By the way, the 360 ​​photos have been wonderful guys..."
 										</blockquote>
-										<h3 class="text-first-color">EVAD | Escuela de Videojuegos y Arte Digital</h3>
+										<blockquote class="item-lang" lang="es" style="--slide-text-color: var(--white-color)">
+											“Mis mejores alumnos en años, por eso puse toda mi confianza en ellos para lanzarlos. Ahí están en
+											el PTA de Málaga. Vamos XR3DPixel. Por cierto, las fotos 360 han sido maravillosas chicos..."
+										</blockquote>
+										<h3 class="text-first-color item-lang" lang="en">EVAD | VideoGames School and Digital Art</h3>
+										<h3 class="text-first-color item-lang" lang="es">EVAD | Escuela de Videojuegos y Arte Digital</h3>
 										<h6 style="--slide-text-color: var(--white-color)">CEO</h6>
 									</li>
 									<li class="slide">
 										<img class="avatar" src="assets/customer-3.jpg" alt="Cliente 3 Ana Alicia Ruiz" />
-										<blockquote style="--slide-text-color: var(--white-color)">
+										<blockquote class="item-lang" lang="en" style="--slide-text-color: var(--white-color)">
 											"Very kind and attentive boy, he took some photos and a panoramic tour of one of my parades, which
 											still make me fall in love after years..."
+										</blockquote>
+										<blockquote class="item-lang" lang="es" style="--slide-text-color: var(--white-color)">
+											"Muchacho muy amable y atento, me hizo unas fotos y un recorrido panorámico de uno de mis
+											desfiles, que todavía me enamoran después de años..."
 										</blockquote>
 										<h3 class="text-first-color">Ana Alicia Ruiz Fashion</h3>
 										<h6 style="--slide-text-color: var(--white-color)">Ownner, Enterpenuer</h6>
 									</li>
 									<li class="slide">
 										<img class="avatar" src="assets/customer-4.jpg" alt="Cliente 4" />
-										<blockquote style="--slide-text-color: var(--white-color)">
+										<blockquote class="item-lang" lang="en" style="--slide-text-color: var(--white-color)">
 											"Juan is a very kind, professional and intelligent boy. I have nothing but words of thanks and he
-											knows it ... his work with 061 and the red cross has been brutal and necessary"
+											knows it ... his work with 061 and the red cross has been roughtly and necessary"
+										</blockquote>
+										<blockquote class="item-lang" lang="es" style="--slide-text-color: var(--white-color)">
+											"Juan es un chico muy amable, profesional e inteligente. No tengo más que palabras de
+											agradecimiento y él lo sabe... su trabajo con el 061 y la cruz roja ha sido brutal y necesario"
 										</blockquote>
 										<h3 class="text-first-color">061 Málaga</h3>
-										<h6 style="--slide-text-color: var(--white-color)">061 - Centro Territorial Málaga</h6>
+										<h6 class="item-lang" lang="en" style="--slide-text-color: var(--white-color)">
+											061 - Malaga Territorial Center
+										</h6>
+										<h6 class="item-lang" lang="es" style="--slide-text-color: var(--white-color)">
+											061 - Centro Territorial Málaga
+										</h6>
 									</li>
 								</ul>
 								<aside class="slides-nav">
@@ -629,9 +920,10 @@
 		</section>
 		<section id="contacto" class="contact section full-lg-screen">
 			<div class="container">
-				<br><br>
-				<h2 class="section-title">You are interested?</h2>
-				<br>
+				<br /><br />
+				<h2 class="section-title item-lang" lang="en">You are interested?</h2>
+				<h2 class="section-title item-lang" lang="es">¿Estás interesado?</h2>
+				<br />
 				<article class="contact-cards">
 					<aside class="contact-card box-shadow-1">
 						<svg width="37" height="28" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -640,8 +932,10 @@
 								fill="#D90062"
 							/>
 						</svg>
-						<h5>Where I`m</h5>
-						<small><i>Málaga</i>, Mijas-Costa, España</small>
+						<h5 class="item-lang" lang="en">Where I`m living?</h5>
+						<h5 class="item-lang" lang="es">¿Dónde vivo?</h5>
+						<small class="item-lang" lang="en"><i>Malaga</i>, Mijas-Costa, Spain</small>
+						<small class="item-lang" lang="es"><i>Málaga</i>, Mijas-Costa, España</small>
 					</aside>
 					<aside class="contact-card box-shadow-1">
 						<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -650,8 +944,9 @@
 								fill="#D90062"
 							/>
 						</svg>
-						<h5>Phone</h5>
-						<small><a href="tel:5512345678">(+034) 609553529</a></small>
+						<h5 class="item-lang" lang="en">Phone</h5>
+						<h5 class="item-lang" lang="es">Teléfono</h5>
+						<small><a href="tel:+034609553529">(+034) 609 ** ** ** </a></small>
 					</aside>
 					<aside class="contact-card box-shadow-1">
 						<svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -669,7 +964,8 @@
 								d="M16.018,3.815L15.232,8h-4.966l0.716-3.815L9.018,3.815L8.232,8H4v2h3.857l-0.751,4H3v2h3.731l-0.714,3.805l1.965,0.369 L8.766,16h4.966l-0.714,3.805l1.965,0.369L15.766,16H20v-2h-3.859l0.751-4H21V8h-3.733l0.716-3.815L16.018,3.815z M14.106,14H9.141 l0.751-4h4.966L14.106,14z"
 							/>
 						</svg>
-						<h5>SOCIAL MEDIA</h5>
+						<h5 class="item-lang" lang="en">SOCIAL MEDIA</h5>
+						<h5 class="item-lang" lang="es">REDES SOCIALES</h5>
 						<small class="social-media">
 							<a href="https://www.youtube.com/channel/UCSEwIRkDJxLkbvKHOAcw_Xw" target="_blank" rel="noopener">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -715,37 +1011,55 @@
 						</small>
 					</aside>
 				</article>
-				<br>
+				<br />
 				<form class="contact-form box-shadow-1">
+					<!-- <label for="name" class="fas fa-user input-icons"></label> -->
 					<input
+						class="username-input"
 						type="text"
 						name="name"
-						placeholder="your name*"
+						placeholder="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  your name *"
 						title="only letters and 'spc-bar'"
 						pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
 						required
 					/>
+
 					<input
+						class="email-input"
 						type="email"
 						name="email"
-						placeholder="email *"
+						placeholder="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  email *"
 						title="wrong Email"
 						pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
 						required
 					/>
-					<textarea name="comments" cols="50" rows="10" placeholder="Leftme your messages*" required></textarea>
+					<textarea
+						class="message-input"
+						name="message"
+						cols="50"
+						rows="10"
+						placeholder="&nbsp; &nbsp; &nbsp; &nbsp; Leftme your message *"
+						required
+					></textarea>
 					<div class="contact-form-loader text-center none">
-						<img src=" assets/loader.svg" alt="Enviando..." />
+						<img class="item-lang" lang="en" src=" assets/loader.svg" alt="Sending..." />
+						<img class="item-lang" lang="es" src=" assets/loader.svg" alt="Enviando..." />
 					</div>
-					<input class="btn" type="submit" value="ENVIAR MENSAJE" />
+					<input class="btn item-lang" lang="en" type="submit" value="SEND MESSAAGE" />
+					<input class="btn item-lang" lang="es" type="submit" value="ENVIAR MENSAJE" />
 				</form>
 				<article id="gracias" class="modal">
 					<div class="modal-content">
 						<article class="contact-form-response">
-							<h3>
+							<h3 class="item-lang" lang="en">
+								Thank you so much!
+								<br />
+								I will contact you soon.
+							</h3>
+							<h3 class="item-lang" lang="es">
 								¡Muchas Gracias!
 								<br />
-								Por tus comentarios
+								Pronto me pondré en contacto contigo.
 							</h3>
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 								<path d="M12,18c4,0,5-4,5-4H7C7,14,8,18,12,18z" />
@@ -762,10 +1076,10 @@
 			</div>
 		</section>
 		<footer class="footer">
-			<small
-				>Designed By John Moon | Juan Luna
-				<a href="https://juanlunablanco.github.io/portfolio" target="_blank" rel="noopener">@juanluna</a></small
-			>
+			<small>
+				Designed By John Moon | Juan Luna
+				<a href="https://juanlunablanco.github.io/portfolio" target="_blank" rel="noopener">@juanluna</a>
+			</small>
 		</footer>
 		<script src="script.js"></script>
 	</body>

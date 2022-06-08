@@ -17,7 +17,128 @@
 		$menu.classList.remove('is-active');
 	});
 })(document);
+/* ********** Menu ***************** */
+/* ********** language and flags ************* */
+((d) => {
+	var form_dictionary = {
+		en: {
+			username: '         Your name ',
+			email: '          email *',
+			message: '         Leftme your message *',
+		},
+		es: {
+			username: '         Tu nombre ',
+			email: '          Tu mejor email *',
+			message: '         Déjame tu mensaje... *',
+		},
+	};
+	var username = d.querySelector('.username-input');
+	var email = d.querySelector('.email-input');
+	var message = d.querySelector('.message-input');
 
+	var lang = d.getElementById('selected_lang');
+	function selectedOption() {
+		var options_array = Array.from(d.querySelector('#selected_lang').options);
+		console.log(options_array);
+		var index_selected = d.querySelector('#selected_lang').selectedIndex;
+		console.log(index_selected);
+
+		updateSelect(options_array, index_selected);
+	}
+	function updateSelect(options_array, index_selected) {
+		let languages = ['en', 'es'];
+		let flags = d.querySelectorAll('.flag');
+		// let flag_selected = flags.querySelector('.flag--' + languages[index_selected]);
+		let optionSelected = d.querySelector('#selected_lang').options[index_selected];
+		options_array.forEach(function (item) {
+			item.removeAttribute('selected');
+		});
+		optionSelected.setAttribute('selected', 'selected');
+
+		// $('.item-lang[lang=en]').fadeIn(1500);
+		// $('.item-lang[lang=es').hide();
+		switch (languages[index_selected]) {
+			case 'en':
+				// banderas remove .active
+				flags.forEach(function (item) {
+					item.classList.remove('active');
+				});
+				// banderas add .active
+				d.querySelector('.flag--en').classList.add('active');
+				// ocultar idiomas que no han sido seleccionados
+				let allOthersItemsEn = d.querySelectorAll(".item-lang[lang='es']");
+				fadeOut(allOthersItemsEn, 10);
+				// mostrar los que si
+				let allItemsLanguageEn = d.querySelectorAll(".item-lang[lang='en']");
+				fadeIn(allItemsLanguageEn, 10);
+				// inputs y textarea changes
+				username.setAttribute('placeholder', form_dictionary.en.username);
+				email.setAttribute('placeholder', form_dictionary.en.email);
+				message.setAttribute('placeholder', form_dictionary.en.message);
+
+				break;
+
+			case 'es':
+				// banderas remove .active
+				flags.forEach(function (item) {
+					item.classList.remove('active');
+				});
+				// banderas add .active
+				d.querySelector('.flag--es').classList.add('active');
+				// ocultar idiomas que no han sido seleccionados
+				let allOthersItemsEs = d.querySelectorAll(".item-lang[lang='en']");
+				fadeOut(allOthersItemsEs, 10);
+				// mostrar los que si
+				let allItemsLanguageEs = d.querySelectorAll(".item-lang[lang='es']");
+				fadeIn(allItemsLanguageEs, 10);
+				// inputs y textarea changes
+				username.setAttribute('placeholder', form_dictionary.es.username);
+				email.setAttribute('placeholder', form_dictionary.es.email);
+				message.setAttribute('placeholder', form_dictionary.es.message);
+
+				break;
+		}
+	}
+	function fadeOut(elements, time) {
+		var op = 1; // initial opacity
+		var timer = setInterval(function () {
+			if (op <= 0.1) {
+				clearInterval(timer);
+				elements.forEach(function (item) {
+					item.style.display = 'none';
+				});
+			}
+			elements.forEach(function (item) {
+				item.style.opacity = op;
+				item.style.filter = 'alpha(opacity=' + op * 100 + ')';
+				op -= op * 0.1;
+			});
+		}, time);
+	}
+	function fadeIn(elements, time) {
+		var op = 0.1; // initial opacity
+		elements.forEach(function (item) {
+			item.style.display = 'block';
+		});
+		var timer = setInterval(function () {
+			if (op >= 1) {
+				clearInterval(timer);
+			}
+			elements.forEach(function (item) {
+				item.style.opacity = op;
+				item.style.filter = 'alpha(opacity=' + op * 100 + ')';
+				op += op * 0.1;
+			});
+		}, time);
+	}
+
+	selectedOption();
+
+	lang.addEventListener('change', function () {
+		selectedOption();
+	});
+})(document);
+/* ********** language ************* */
 /* ********** ContactForm ********** */
 ((d) => {
 	const $form = d.querySelector('.contact-form'),
@@ -50,3 +171,4 @@
 			});
 	});
 })(document);
+/* ********** ContactForm ********** */
