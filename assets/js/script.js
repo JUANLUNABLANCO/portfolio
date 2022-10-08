@@ -181,7 +181,7 @@ const myTags = [
     'TypeScript', 'CSS', 'HTML',
     'Angular', 'Nodejs', 'Web3',
     'VanillaJS', 'express', 'TDD',
-    'scrum', 'git', 'MongoDB',
+    'scrum', 'git', 'MongoDB', 'solidity'
 ];
 var tagCloud = TagCloud('.cloudtag', myTags, {
     // radius in px
