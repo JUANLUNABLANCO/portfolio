@@ -1091,17 +1091,29 @@
             </article>
             <br />
             <form class="contact-form box-shadow-1">
-                <!-- <label for="name" class="fas fa-user input-icons"></label> -->
-                <input class="username-input" type="text" name="name" placeholder="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  your name *" title="only letters and 'spc-bar'" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required />
+                <div class="group-form">
+                    <label for="name" class="username-label"></label>
+                    <input class="username-input" type="text" name="name" id="name" placeholder="your name *" title="only letters and 'spc-bar'" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required />
+                </div>
 
-                <input class="email-input" type="email" name="email" placeholder="&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  email *" title="wrong Email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required />
-                <textarea class="message-input" name="message" cols="50" rows="10" placeholder="&nbsp; &nbsp; &nbsp; &nbsp; Leftme your message *" required></textarea>
+                <div class="group-form">
+                    <label for="email" class="email-label"></label>
+                    <input class="email-input" type="email" name="email" id="email" placeholder="email *" title="wrong Email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required />
+                </div>
+
+                <div class="group-form">
+                    <label for="message" class="message-label"></label>
+                    <textarea class="message-input" name="message" id="message" cols="50" rows="10" placeholder="Leftme your message *" required></textarea>
+                </div>
+
                 <div class="contact-form-loader text-center none">
                     <img class="item-lang" lang="en" src=" assets/images/svgs/loader.svg" alt="Sending..." />
                     <img class="item-lang" lang="es" src=" assets/images/svgs/loader.svg" alt="Enviando..." />
                 </div>
+            
                 <input class="btn item-lang" lang="en" type="submit" value="SEND MESSAAGE" />
                 <input class="btn item-lang" lang="es" type="submit" value="ENVIAR MENSAJE" />
+                
             </form>
             <article id="gracias" class="modal">
                 <div class="modal-content">

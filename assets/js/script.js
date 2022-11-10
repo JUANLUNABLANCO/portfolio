@@ -22,14 +22,14 @@
 ((d) => {
     var form_dictionary = {
         en: {
-            username: '         Your name ',
-            email: '          email *',
-            message: '         Leftme your message *',
+            username: 'Your full name',
+            email: 'Your contact email *',
+            message: 'Leftme your message, please *',
         },
         es: {
-            username: '         Tu nombre ',
-            email: '          Tu mejor email *',
-            message: '         Déjame tu mensaje... *',
+            username: 'Tu nombre',
+            email: 'Tu mejor email *',
+            message: 'Déjame tu mensaje... *',
         },
     };
     var username = d.querySelector('.username-input');
