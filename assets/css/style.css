@@ -104,20 +104,20 @@ p {
 
 /* ************ language ************ */
 
-[lang='ar'] {
-    direction: rtl;
-    display: none;
-}
 
+/* default lang=es */
 
-/* default lang=en */
-
-[lang='en'] {
+[lang='es'] {
     display: block;
 }
 
-[lang='es'],
+[lang='en'],
 [lang='fr'] {
+    display: none;
+}
+
+[lang='ar'] {
+    direction: rtl;
     display: none;
 }
 
@@ -636,7 +636,7 @@ p {
 .carousel {
     margin: 2rem auto;
     padding: 2rem 0;
-    max-width: 800px;
+    max-width: 100vw;
     text-align: center;
     overflow-x: hidden;
     background-color: var(--carousel-bg-color);
@@ -708,6 +708,12 @@ p {
     background-color: var(--gray-dark-color);
 }
 
+@media screen and (min-width: 1024px) {
+    .carousel {
+        max-width: 800px;
+    }
+}
+
 
 /* ********** Contact Form ********** */
 
@@ -722,36 +728,38 @@ p {
 }
 
 .contact-form input[type="text"],
+
 /* input[type="password"],
 input[type="date"],
 input[type="datetime"], */
+
 .contact-form input[type="email"],
+
 /* input[type="number"],
 input[type="search"],
 input[type="tel"],
 input[type="time"],
 input[type="url"], */
+
 .contact-form textarea
 /*, select  */
+
 {
     padding: 0.5rem;
     margin: 1rem auto;
-     
     width: 100%;
     /* border: 1px solid red !important; */
-
-
-  border: none;
-  font-size: 16px;
-  height: auto;
-  margin: 0;
-  outline: 0;
-  padding: 15px;
-  /* width: 100%; */
-  /* background-color: #e8eeef; */
-  color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 10px;
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    /* width: 100%; */
+    /* background-color: #e8eeef; */
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 10px;
 }
 
 .contact-form input,
@@ -765,9 +773,12 @@ input[type="url"], */
     padding-left: 0;
     border-bottom: thin solid var(--gray-dark-color) !important;
 }
-.contact-form input:focus, .contact-form textarea:focus {
+
+.contact-form input:focus,
+.contact-form textarea:focus {
     border: 1px solid var(--first-color) !important;
 }
+
 .contact-form label {
     width: 40px;
     height: 40px;
@@ -839,7 +850,6 @@ input[type="url"], */
     .contact-form textarea {
         font-size: 1.2rem;
     }
-
     /* .contact-form textarea,
     .contact-form-loader {
         grid-column: span 2;
@@ -871,7 +881,7 @@ input[type="url"], */
 }
 
 .hero-image-title {
-    font-size: 7.5vw;
+    font-size: 5.5vw;
     color: var(--hero-text-color);
 }
 
