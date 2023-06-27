@@ -622,14 +622,17 @@ p {
     0% {
         transform: translateX(0%);
     }
-    25% {
-        transform: translateX(-25%);
+    20% {
+        transform: translateX(-20%);
     }
-    50% {
-        transform: translateX(-50%);
+    40% {
+        transform: translateX(-40%);
     }
-    75% {
-        transform: translateX(-75%);
+    60% {
+        transform: translateX(-60%);
+    }
+    80% {
+        transform: translateX(-80%);
     }
 }
 
@@ -645,7 +648,7 @@ p {
 .carousel .slides {
     padding-left: 0;
     /* 100% por cada slide */
-    width: 400%;
+    width: 500%;
     display: flex;
     list-style: none;
     transition: transform 0.5s ease-in-out;
@@ -690,21 +693,25 @@ p {
 }
 
 #slide-2:checked~.slides {
-    transform: translateX(-25%);
+    transform: translateX(-20%);
 }
 
 #slide-3:checked~.slides {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
 }
 
 #slide-4:checked~.slides {
-    transform: translateX(-75%);
+    transform: translateX(-60%);
+}
+#slide-5:checked~.slides {
+    transform: translateX(-80%);
 }
 
 #slide-1:checked~.slides-nav label#dot-1,
 #slide-2:checked~.slides-nav label#dot-2,
 #slide-3:checked~.slides-nav label#dot-3,
-#slide-4:checked~.slides-nav label#dot-4 {
+#slide-4:checked~.slides-nav label#dot-4,
+#slide-5:checked~.slides-nav label#dot-5 {
     background-color: var(--gray-dark-color);
 }
 
@@ -901,9 +908,13 @@ input[type="url"], */
 
 .menu {
     position: fixed;
+    /* esto impedía el fijamiento, en chrome */
+    top: 0;
     left: 0;
-    bottom: var(--header-height);
+    right: 0;
     width: 100%;
+    
+    /* height: var(--header-height); */
     display: flex;
     flex-direction: column;
     background-color: var(--second-color);
@@ -937,6 +948,8 @@ input[type="url"], */
     }
     .menu {
         position: static;
+        top: 0;
+        left: 0;
         width: auto;
         flex-direction: row;
         opacity: 1;
