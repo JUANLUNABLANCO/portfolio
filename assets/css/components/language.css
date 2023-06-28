@@ -1,0 +1,15 @@
+/* ************ language ************ */
+/* default lang=es */
+[lang='es'] {
+  display: block;
+}
+
+[lang='en'],
+[lang='fr'] {
+  display: none;
+}
+
+[lang='ar'] {
+  direction: rtl;
+  display: none;
+}

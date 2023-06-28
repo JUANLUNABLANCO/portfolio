@@ -1,0 +1,54 @@
+@import url('./root/variables.css');
+@import url('./root/reset.css');
+
+/* ********** Sections ************ */
+@import url('./sections/header.css');
+@import url('./sections/contact-form.css');
+
+/* ********** Components ********** */
+@import url('./components/utilities.css');
+@import url('./components/menu.css');
+@import url('./components/language.css');
+@import url('./components/flags.css');
+@import url('./components/hero-image.css');
+@import url('./components/planet-effect.css');
+@import url('./components/3d-tags-cloud.css');
+@import url('./components/progress-bar.css');
+@import url('./components/modal.css');
+@import url('./components/caroussel.css');
+
+/* ********** site styles ********** */
+@import url('./site-styles.css');
+
+
+
+/** ******** Problem solved for menu not fixed ************ */
+.menu {
+    contain: paint;
+    position: fixed !;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    margin-top: 0 !important;
+}
+.header {
+    contain: paint;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    margin-top: 0 !important;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+

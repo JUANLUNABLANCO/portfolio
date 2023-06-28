@@ -1,0 +1,218 @@
+/* ********** Site Styles ********** */
+
+.about>article {
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 100%;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-card>svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--first-color);
+}
+
+.contact-card>small {
+  margin-top: -1rem;
+}
+
+.footer {
+  margin-bottom: var(--header-height);
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--third-color);
+}
+
+
+.portfolio-card {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.portfolio-card+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-card>img.logo-card {
+  position: absolute;
+  top: 140px;
+  /* 200 - 120/2 = 140 */
+  left: 140px;
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+}
+
+.portfolio-card>h1.title-card {
+  position: absolute;
+  font-weight: 900;
+  font-size: 3rem;
+  bottom: 20px;
+  /* 200 - 120/2 = 140 */
+  left: 30px;
+  z-index: 10;
+}
+
+.portfolio-card:nth-child(odd)>h1.title-card {
+  color: var(--first-color);
+}
+
+.portfolio-card:nth-child(even)>h1.title-card {
+  color: var(--link-color);
+}
+
+.portfolio-card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--first-alpha-color);
+  color: var(--white-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card-info {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 12;
+}
+
+.portfolio-card-info>div {
+  padding: 1rem;
+  border: thin solid var(--white-color);
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-modal {
+  padding: 1rem;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+}
+
+.portfolio-modal h3 {
+  border-bottom: medium solid var(--first-color);
+  margin: 1rem auto;
+  padding: 0.5rem 0;
+  color: var(--title-color);
+}
+
+.portfolio-details {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+  color: var(--first-color);
+}
+
+.service-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.service-card h3 {
+  color: var(--title-color);
+}
+
+.service-card svg {
+  margin-bottom: 1.25rem;
+  fill: var(--first-color);
+}
+
+.social-media a {
+  padding: 0 0.4rem;
+  text-decoration: none;
+}
+
+.social-media svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 48%);
+      justify-content: space-between;
+  }
+  .portfolio>.container {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+  }
+  .portfolio .section-title {
+      grid-column: span 2;
+  }
+  .portfolio-modal {
+      max-width: 800px;
+      flex-direction: row;
+  }
+  .portfolio-info {
+      margin-left: 1rem;
+      align-self: center;
+  }
+  .services>.container {
+      display: grid;
+      grid-template-columns: repeat(2, 45%);
+      justify-content: space-between;
+      align-content: center;
+  }
+  .services .section-title {
+      grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+      display: grid;
+      grid-template-columns: repeat(3, 30%);
+      justify-content: space-between;
+      align-content: center;
+  }
+  .contact-cards {
+      grid-template-columns: repeat(4, 24%);
+  }
+  .footer {
+      margin-bottom: 0;
+  }
+  .header {
+      position: sticky;
+      top: 0;
+      padding: 0.5rem;
+      height: calc(var(--header-height) - 0.5rem);
+  }
+  .portfolio>.container {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  .portfolio .section-title {
+      grid-column: span 3;
+  }
+  .services>.container {
+      grid-template-columns: repeat(3, 30%);
+  }
+  .services .section-title {
+      grid-column: span 3;
+  }
+}

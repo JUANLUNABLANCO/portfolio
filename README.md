@@ -69,3 +69,9 @@ Juan Manuel Luna Blanco
   Nada extraordianrio. Actualizar los proyectos y hacer referancias aquí, nada más
 
 ## Production in github/pages CI in msater branch
+
+## fixed_menu branch
+
+El problema es que se baja cuando scroleamos y se carga la parte del planeta 'container_planet' que tiene animaciones, busca solución.
+
+
