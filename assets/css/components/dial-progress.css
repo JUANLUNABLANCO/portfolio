@@ -1,0 +1,14 @@
+/* Estilo para los párrafos dentro de .progress */
+p.progress-text {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+p.progress-text b i {
+  margin-right: 10px;
+}

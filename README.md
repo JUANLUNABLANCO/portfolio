@@ -35,7 +35,7 @@ Juan Manuel Luna Blanco
 	
 ## LINTER
 
-	no es necesario solo el linter de vsc instlado que nos mira los errores de js
+	no es necesario solo el linter de vsc instalado que nos mira los errores de js
 	
 ## GIT CONFIGURATIONS
 
@@ -60,6 +60,7 @@ Juan Manuel Luna Blanco
 ## Cliente APIS
 
   Nada extraordianrio
+	
 ## npm aditional installations
 
 	Nada extraordianrio
